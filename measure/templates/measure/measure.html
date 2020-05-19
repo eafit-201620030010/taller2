@@ -2,7 +2,20 @@
 {% block content %}
 <div class="container">
   <form method="get">
-    <input type="number" name="value">
+    <p>Value: <input type="number" name="value"></p>
+    <p>Codigo: <input type="number" name="codigo"></p>
+    <p>Latitud: <input type="number" name="latitud"></p>
+    <p>Longitud: <input type="number" name="longitud"></p>
+    <p>Terreno:
+      <select name="terreno">
+        <option>Planicie</option>
+        <option>Ladera</option>
+        <option>Cenagoso</option>
+        <option>Desértico</option>
+      </select>
+    </p>
+    <p>Area: <input type="number" name="area" min="1"></p>
+
     <button type="submit">Adicionar</button>
   </form>
   {% for measure in measures %}
